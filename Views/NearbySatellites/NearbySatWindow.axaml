@@ -1,0 +1,30 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:nearbySatellites="clr-namespace:RWI491775_Assessment_SATELLITES.Views.NearbySatellites"
+        Width="1800" Height="1100"
+        x:Class="RWI491775_Assessment_SATELLITES.Views.NearbySatellites.NearbySatWindow"
+        Title="NearbySatWindow"
+        TransparencyLevelHint="AcrylicBlur"
+        ExtendClientAreaToDecorationsHint="True"
+        WindowStartupLocation="CenterOwner">
+    
+    <!-- Background Image -->
+    <Window.Background>
+        <ImageBrush Stretch="UniformToFill" Source="/Assets/sax.png"/>
+    </Window.Background>
+    
+    <Panel>
+        <ExperimentalAcrylicBorder IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <ExperimentalAcrylicMaterial
+                    TintColor="Black"
+                    TintOpacity="1"
+                    MaterialOpacity="0.55" />
+            </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>
+
+        <Panel Margin="40">
+            <nearbySatellites:NearbySatView />
+        </Panel>
+    </Panel>
+</Window>

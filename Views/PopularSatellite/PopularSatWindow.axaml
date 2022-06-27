@@ -1,0 +1,29 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:popularSatellite="clr-namespace:RWI491775_Assessment_SATELLITES.Views.PopularSatellite"
+        Width="1050" Height="600"
+        x:Class="RWI491775_Assessment_SATELLITES.Views.PopularSatellite.PopularSatWindow"
+        Title="PopularSatWindow"
+        TransparencyLevelHint="AcrylicBlur"
+        ExtendClientAreaToDecorationsHint="True"
+        WindowStartupLocation="CenterOwner">
+        
+        <!-- Background items: Popular Satellite Window -->
+        <Window.Background>
+                <ImageBrush Stretch="UniformToFill" Source="/Assets/erf.png"/>
+        </Window.Background>
+        <Panel>
+                <ExperimentalAcrylicBorder IsHitTestVisible="False">
+                        <ExperimentalAcrylicBorder.Material>
+                                <ExperimentalAcrylicMaterial
+                                        TintColor="Black"
+                                        TintOpacity="1"
+                                        MaterialOpacity="0.45" />
+                        </ExperimentalAcrylicBorder.Material>
+                </ExperimentalAcrylicBorder>
+
+                <Panel Margin="40">
+                        <popularSatellite:PopularSatView />
+                </Panel>
+        </Panel>
+</Window>

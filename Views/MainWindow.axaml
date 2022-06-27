@@ -1,0 +1,59 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RWI491775_Assessment_SATELLITES.ViewModels"
+        Width="570" Height="350"
+        x:Class="RWI491775_Assessment_SATELLITES.Views.MainWindow"
+        Icon="/Assets/orbit.ico"
+        Title="Orbito"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent"
+        ExtendClientAreaToDecorationsHint="True"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <!-- Semi-transparent background -->
+    <Panel>
+        <ExperimentalAcrylicBorder IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <ExperimentalAcrylicMaterial
+                    BackgroundSource="Digger"
+                    TintColor="Black"
+                    TintOpacity="1"
+                    MaterialOpacity="0.65"
+                />
+            </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>
+        
+        <!-- Logo -->
+        <Image Source="/Assets/orbit.png"
+               Width="200"
+               Height="200"
+               Margin="30"
+               VerticalAlignment="Top"
+               />
+        
+        <!-- Grid layout: Buttons-->
+        <Grid RowDefinitions="Auto"
+              ColumnDefinitions="Auto, Auto"
+              VerticalAlignment="Bottom"
+              HorizontalAlignment="Center"
+              Margin="30">
+            <Button Grid.Column="0" HorizontalAlignment="Center"
+                    Width="170"
+                    HorizontalContentAlignment="Center"
+                    Content="Most Popular"
+                    Margin="3"
+                    Command="{Binding OpenPopSat}"/>
+            <Button Grid.Column="1" HorizontalAlignment="Center"
+                    Width="170"
+                    HorizontalContentAlignment="Center"
+                    Content="Nearby Saxion"
+                    Margin="3"
+                    Command="{Binding OpenNearbySat}"/>
+        </Grid> 
+    </Panel>
+</Window>
